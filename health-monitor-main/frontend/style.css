@@ -1,0 +1,368 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #e3f2fd 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  background: linear-gradient(90deg, #1976d2 60%, #26c6da 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 8px #0002;
+  letter-spacing: 2px;
+}
+
+.main-header h1 {
+  margin: 0 0 2.2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px #0003;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.nav-bar button {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  padding: 0.7rem 2.2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.nav-bar button.active,
+.nav-bar button:hover {
+  background: #1976d2;
+  color: #fff;
+  border: 2px solid #1976d2;
+}
+
+.photo-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.photo-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #e3f2fd;
+  object-fit: cover;
+  border: 3px solid #1976d2;
+  box-shadow: 0 2px 8px #1976d220;
+  margin-bottom: 0.3rem;
+}
+
+.photo-upload-label {
+  font-weight: bold;
+  color: #1976d2;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 1.05rem;
+}
+
+.photo-upload-label:hover {
+  color: #26c6da;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px #1976d220;
+  position: relative;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.stat {
+  background: linear-gradient(135deg, #26c6da 0%, #1976d2 100%);
+  color: #fff;
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 8px #1976d220;
+}
+
+.stat h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 2px 4px #0002;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fafcff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #1976d210;
+}
+
+th,
+td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #e3f2fd;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.actions button {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+  margin-right: 0.5rem;
+}
+
+.actions button.edit-btn {
+  background: #1976d2;
+  margin-right: 0.5rem;
+}
+
+.actions button.edit-btn:hover {
+  background: #12509e;
+}
+
+.actions button:hover {
+  background: #b71c1c;
+}
+
+.patient-photo-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1976d2;
+  background: #e3f2fd;
+  box-shadow: 0 1px 4px #1976d220;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form select {
+  flex: 1 1 120px;
+  padding: 0.5rem;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f9f9f9;
+}
+
+form input[type="file"] {
+  flex: none;
+  width: 180px;
+  padding: 0.2rem;
+  background: transparent;
+  border: none;
+}
+
+form button[type="submit"] {
+  background: #43a047;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #1b5e20;
+}
+
+.modal-bg {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bg.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  min-width: 320px;
+  max-width: 98vw;
+  box-shadow: 0 4px 24px #1976d240;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #1976d2;
+  margin-bottom: 1.2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: #1976d2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-close:hover {
+  color: #e53935;
+}
+
+#add-patient-btn,
+#prescriptions-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  margin-right: 1rem;
+}
+
+#add-patient-btn:hover,
+#prescriptions-btn:hover {
+  background: #12509e;
+}
+
+#prescriptions-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+#prescriptions-page li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #e3f2fd;
+}
+
+#prescriptions-page li:last-child {
+  border-bottom: none;
+}
+
+#prescriptions-page li button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#prescriptions-page li button:hover {
+  background: #43a047;
+}
+
+#prescription-details {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  resize: vertical;
+  min-height: 100px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar button {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
